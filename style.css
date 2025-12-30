@@ -1,0 +1,111 @@
+body{
+    position: relative;
+    margin: 0px;
+    padding-left: 32px;
+    box-sizing: border-box;
+    background-color: #0d1117;
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+    font-family: sans-serif;
+}
+/* Chrome, Safari, Edge, Opera */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+    -webkit-appearance: none;
+}
+/*Logic for using body::before is that if we directtly add the image to body and set the opcatiy then every element in the body gets set to opacity 0.55*/
+body::before {
+    content: "";
+    position: fixed; /* Stays in place when scrolling */
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* YOUR LOCAL IMAGE HERE */
+    background-image: url('images/c58d078a-856c-4aed-9ff9-0bf536e245f2.jpg'); /* <--- Check this path! */
+    background-size: cover;
+    background-position: center;
+    
+    /* THE TRANSPARENCY MAGIC */
+    opacity: 0.45; 
+    
+    /* Put it behind the text */
+    z-index: -2; 
+}
+.title{
+    padding-left: 2px;
+    padding-bottom: 3px;
+    margin-top: 10px;
+    font-family: 'Pacifico', cursive; /* The handwriting font */
+    font-size: 30px; /* Make it big */
+}
+.block-text{
+    display: block;
+}
+.highlight , .title {
+    /* The Gradient Color (Pink to Purple) */
+    background: linear-gradient(to right, #ec4899, #a855f7); /* Tailwind pink-500 to purple-500 */
+    
+    /* The Magic: Make the background appear ONLY where the text is */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Hide the actual text color so the gradient shows through */
+    color: transparent;
+    
+    /* The Glow Effect */
+    /* We use multiple shadows to build up a bright glow */
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.5), /* Soft wide purple */
+                 0 0 20px rgba(236, 72, 153, 0.3); /* Soft wide pink */
+                
+    
+    font-weight:bold;
+}
+.searchText{
+
+    margin-top: 80x;
+    font-size: 1.5rem;
+}
+.searchBox{
+    position: relative;
+    width: 450px;
+}
+input{
+    height: 80px;
+    width: 100%;
+    padding: 20px;
+    padding-right:100px ;
+    border-radius: 10px;
+    background-color: #000;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    box-shadow: inset 0 0 10px rgba(168,85,247,0.3);  /*x offset y-offset blur color*/
+}
+.searchBox input:hover{
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+.searchBox button{
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    bottom: 22px;
+    background-color: #a855f7;
+    border: none;
+    color: white;
+    padding: 0 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.octocat-container{
+    position: fixed;
+    bottom: -20px;
+    right: -20px;
+}
