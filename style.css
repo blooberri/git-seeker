@@ -9,6 +9,7 @@ body{
     height: 100vh;
     font-family: sans-serif;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
