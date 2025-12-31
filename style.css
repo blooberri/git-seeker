@@ -43,7 +43,7 @@ body::before {
     padding-bottom: 3px;
     margin-top: 10px;
     font-family: 'Pacifico', cursive; /* The handwriting font */
-    font-size: 30px; /* Make it big */
+    font-size: 25px; /* Make it big */
 }
 .block-text{
     display: block;
@@ -106,7 +106,45 @@ input{
     font-weight: bold;
 }
 .octocat-container{
+    
     position: fixed;
     bottom: -20px;
     right: -20px;
+}
+@media screen and (max-width:788px){
+    .octocat-container{
+        position: static;
+        align-self: flex-end;
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width:520px) and (max-width:788px){
+    .title{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:380px) and (max-width:519px){
+    .title{
+        font-size: 15px;
+
+    }
+    .searchText{
+        font-size: 1.3rem;
+    }
+    .searchBox{
+        width: 350px;
+    }
+}
+@media screen and (min-width:0px) and (max-width:379.99px){
+       .title{
+        font-size: 15px;
+
+    }
+    .searchText{
+        font-size: 1.2rem;
+    }
+    .searchBox{
+        width: 300px;
+    }
 }
